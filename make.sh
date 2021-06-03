@@ -2,16 +2,19 @@
 #
 # Simple SH wrapper to run Jekyll in Docker.
 
-# Jekyll configuration
+cd "$(dirname ${0})"
+
+PROJECT_ROOT="$(pwd)"
 JEKYLL_VERSION=4.0
 JEKYLL_LPORT=4000
-JEKYLL_ROOT="jekyll"
+JEKYLL_ROOT="${PROJECT_ROOT}/jekyll"
 
 
 function jekyll {
     docker run --rm -it \
-    --volume="${PWD}:/srv/jekyll" \
-    --volume="${PWD}/vendor/bundle:/usr/local/bundle" \
+    --volume="${JEKYLL_ROOT}:/srv/jekyll" \
+    --volume="${JEKYLL_ROOT}/vendor/bundle:/usr/local/bundle" \
+    --volume="${PROJECT_ROOT}/docs:/srv/jekyll/_site" \
     -p ${JEKYLL_LPORT}:4000 \
     -e "JEKYLL_ROOTLESS=true" \
     jekyll/jekyll:$JEKYLL_VERSION \
@@ -28,7 +31,6 @@ function build {
 }
 
 
-cd "$(dirname ${0})/${JEKYLL_ROOT}"
 case $1 in
     new|init) shift; init $@;;
     build) build;;
