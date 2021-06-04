@@ -10,7 +10,10 @@ JEKYLL_LPORT=4000
 JEKYLL_ROOT="${PROJECT_ROOT}/jekyll"
 
 
-function jekyll {
+# Run the Jekyll image.
+# $1: command name ('jekyll', 'bundle', etc.)
+# $@: command arguments
+function run() {
     docker run --rm -it \
     --volume="${JEKYLL_ROOT}:/srv/jekyll" \
     --volume="${JEKYLL_ROOT}/vendor/bundle:/usr/local/bundle" \
@@ -18,22 +21,34 @@ function jekyll {
     -p ${JEKYLL_LPORT}:4000 \
     -e "JEKYLL_ROOTLESS=true" \
     jekyll/jekyll:$JEKYLL_VERSION \
-    jekyll $@
+    "${1}" ${@:2}
 }
 
 
-function init {
-    jekyll new . $@
+function init() {
+    run jekyll new . --force
 }
 
-function build {
-    jekyll build
+
+function update() {
+    run bundle update
+}
+
+
+function build() {
+    run jekyll build
+}
+
+
+function serve() {
+    run jekyll serve
 }
 
 
 case $1 in
     new|init) shift; init $@;;
     build) build;;
-    jekyll) shift; jekyll $@;;
-    *) echo "usage: $(basename ${0}) {init|build|serve|jekyll}"
+    serve) serve;;
+    run) shift; run $@;;
+    *) echo "usage: $(basename ${0}) {new|init|build|serve|run}"
 esac
