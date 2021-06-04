@@ -30,6 +30,7 @@ StreamingCommand
 ## Description
 
 `foreach` runs a sub-pipeline for each event.
+it is mostly useful to chain generating commands.
 
 
 ## Examples
@@ -38,7 +39,7 @@ StreamingCommand
 Query an url for each event:
 
 ```
-| read path='urls.txt' mode=line
+| readline 'urls.txt'
 | foreach [
     | curl url=line
 ]
@@ -46,6 +47,4 @@ Query an url for each event:
 
 
 ## See also
-
-* [`echo`](/command_echo)
 

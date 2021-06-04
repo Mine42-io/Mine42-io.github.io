@@ -32,9 +32,31 @@ StreamingCommand
 ```
 
 
+
 ## Description
 
+`eval` evaluates an expression and returns its results.
+
+The expression is evaluated by the underlying Python interpreter. Unlike
+standard evaluation, `eval` uses a set of custom functions and a custom
+variables resolution mechanism.
+
+
 ## Examples
+
+
+```
+| make showinfo=yes
+| eval some.field = id + 1
+```
+
+```
+| commands
+| eval
+    command.name = at(command.aliases, 0),
+    command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md')
+```
+
 
 ## See also
 

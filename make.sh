@@ -25,21 +25,26 @@ function run() {
 }
 
 
+# Initialize a Jekyll site.
 function init() {
     run jekyll new . --force
 }
 
 
+# Update Bundle.
 function update() {
     run bundle update
 }
 
 
+# Build the Jekyll site.
 function build() {
     run jekyll build
+    cp CNAME "${PROJECT_ROOT}/docs/CNAME"
 }
 
 
+# Server the Jekyll site.
 function serve() {
     run jekyll serve
 }

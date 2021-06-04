@@ -61,7 +61,7 @@
   },"10": {
     "doc": "eval",
     "title": "eval",
-    "content": "# `eval` Evaluate a Python expression and assign result to a field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `eval` * `evaluate` ## Synopsis ```shell | eval = [, ...] ``` ## Description ## Examples ## See also ",
+    "content": "# `eval` Evaluate a Python expression and assign result to a field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `eval` * `evaluate` ## Synopsis ```shell | eval = [, ...] ``` ## Description `eval` evaluates an expression and returns its results. The expression is evaluated by the underlying Python interpreter. Unlike standard evaluation, `eval` uses a set of custom functions and a custom variables resolution mechanism. ## Examples ``` | make showinfo=yes | eval some.field = id + 1 ``` ``` | commands | eval command.name = at(command.aliases, 0), command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md') ``` ## See also ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_eval.html",
     "relUrl": "/m42pl/m42pl-commands/command_eval.html"
   },"11": {
@@ -97,7 +97,7 @@
   },"16": {
     "doc": "foreach",
     "title": "foreach",
-    "content": "# `foreach` Run a sub-pipeline for each event Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Synopsis ```shell | foreach ``` ## Description `foreach` runs a sub-pipeline for each event. ## Examples Query an url for each event: ``` | read path='urls.txt' mode=line | foreach [ | curl url=line ] ``` ## See also * [`echo`](/command_echo) ",
+    "content": "# `foreach` Run a sub-pipeline for each event Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Synopsis ```shell | foreach ``` ## Description `foreach` runs a sub-pipeline for each event. it is mostly useful to chain generating commands. ## Examples Query an url for each event: ``` | readline 'urls.txt' | foreach [ | curl url=line ] ``` ## See also ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_foreach.html",
     "relUrl": "/m42pl/m42pl-commands/command_foreach.html"
   },"17": {
@@ -157,7 +157,7 @@
   },"26": {
     "doc": "make",
     "title": "make",
-    "content": "# `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate a single event with basic generation information: ``` | make showinfo=yes ``` ## See also * [`echo`](/command_echo) ",
+    "content": "# `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate 10 events with basic information: ``` | make count=10 showinfo=yes ``` ## See also ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_make.html",
     "relUrl": "/m42pl/m42pl-commands/command_make.html"
   },"27": {
@@ -193,7 +193,7 @@
   },"32": {
     "doc": "output",
     "title": "output",
-    "content": "# `output` Prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `output` * `print` ## Synopsis ```shell | output [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description ## Examples ## See also ",
+    "content": "# `output` Prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `output` * `print` ## Synopsis ```shell | output [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description `output` prints events on the standard output (i.e. the terminal). `output` can print events using the specified `format`, which should match an **encoder** name (e.g. `json`, `hjson`, ...). It also buffers events and filters duplicate events id (only the latest event with a given ID is kept in the internal buffer and then printed). ## Examples Output events: ``` | output ``` Output events as they arrive (without buffer): ``` | output buffer=1 ``` Output events as 'json' strings: ``` | output format='json' ``` ## See also ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_output.html",
     "relUrl": "/m42pl/m42pl-commands/command_output.html"
   },"33": {

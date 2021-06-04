@@ -49,14 +49,11 @@ Generate a single, empty event:
 | make
 ```
 
-Generate a single event with basic generation information:
+Generate 10 events with basic information:
 
 ```
-| make showinfo=yes
+| make count=10 showinfo=yes
 ```
-
 
 ## See also
-
-* [`echo`](/command_echo)
 
