@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `where`
 * `filter`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | where <expression>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

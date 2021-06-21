@@ -18,6 +18,9 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `echo`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ GeneratingCommand
 | echo [[count=]<count>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

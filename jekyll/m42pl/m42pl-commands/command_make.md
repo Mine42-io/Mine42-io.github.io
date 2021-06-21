@@ -18,20 +18,17 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `make`
 * `makeevent`
 * `makeevents`
 
-
 ## Synopsis
 
 ```shell
 | make [[count=]<number>] [[showinfo=](yes|no)][[chunks=]<number>] [[frequency=]<seconds>]
 ```
-
 
 
 ## Description
@@ -54,6 +51,4 @@ Generate 10 events with basic information:
 ```
 | make count=10 showinfo=yes
 ```
-
-## See also
 

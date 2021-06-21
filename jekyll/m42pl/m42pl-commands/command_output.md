@@ -18,19 +18,16 @@ BufferingCommand
 ---
 
 
-
 ## Aliases
 
 * `output`
 * `print`
-
 
 ## Synopsis
 
 ```shell
 | output [[format=](hjson|raw|...)] [[buffer=]<number>]
 ```
-
 
 
 ## Description
@@ -65,6 +62,4 @@ Output events as 'json' strings:
 | output format='json'
 ```
 
-
-## See also
 

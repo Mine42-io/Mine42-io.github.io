@@ -18,12 +18,10 @@ Command
 ---
 
 
-
 ## Aliases
 
 * `script`
 * `script_json`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ Command
 | script [script=]<script string>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

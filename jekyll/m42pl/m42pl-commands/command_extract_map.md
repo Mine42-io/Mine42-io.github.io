@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `extract_map`
 * `extract_maps`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | extract_map [field=]<source field> [[headers=](headers)] [[prefix=]<key prefix>] [[delim=]<values delimiter>] [[dest=]<dest field>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

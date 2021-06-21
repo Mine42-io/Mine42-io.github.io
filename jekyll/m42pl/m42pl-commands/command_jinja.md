@@ -18,13 +18,11 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `jinja`
 * `template_jinja`
 * `jinja_template`
-
 
 ## Synopsis
 
@@ -32,10 +30,7 @@ StreamingCommand
 | jinja [src=]{source field} [dest=]{destination field} [[searchpath=]<search path>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

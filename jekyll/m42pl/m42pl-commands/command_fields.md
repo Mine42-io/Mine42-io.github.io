@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `fields`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | fields [+|-] field_name [, ...]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

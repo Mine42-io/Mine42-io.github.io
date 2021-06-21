@@ -18,6 +18,9 @@ BufferingCommand
 ---
 
 
+## Aliases
+
+* `buffer`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ BufferingCommand
 | buffer [[size=]<buffer size>] [[showchunk=]<yes|no>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

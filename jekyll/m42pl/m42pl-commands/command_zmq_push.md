@@ -18,15 +18,18 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `zmq_push`
 * `zmq_ventilate`
 
+## Synopsis
+
+```shell
+| zmq_push 
+```
+
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,13 +18,15 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `foreach`
 
 ## Synopsis
 
 ```shell
 | foreach <pipeline>
 ```
-
 
 
 ## Description
@@ -45,6 +47,4 @@ Query an url for each event:
 ]
 ```
 
-
-## See also
 

@@ -18,13 +18,11 @@ BufferingCommand
 ---
 
 
-
 ## Aliases
 
 * `noout`
 * `nooutput`
 * `noprint`
-
 
 ## Synopsis
 
@@ -32,10 +30,7 @@ BufferingCommand
 | noout [[format=](hjson|raw|...)] [[buffer=]<number>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

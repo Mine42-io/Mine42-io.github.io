@@ -18,13 +18,11 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `url`
 * `curl`
 * `wget`
-
 
 ## Synopsis
 
@@ -32,10 +30,7 @@ GeneratingCommand
 | url [urls=](url, ...) [[method=]{HTTP method}] [[headers]={headers k/v}][[data=]{data k/v}] [[json=]{json k/v}] [[frequency=]{seconds}][[count=]{integer}]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

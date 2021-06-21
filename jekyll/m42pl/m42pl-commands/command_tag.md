@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `tag`
 * `tags`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | tag <key name>={field} [...]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

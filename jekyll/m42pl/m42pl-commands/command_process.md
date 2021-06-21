@@ -18,6 +18,9 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `process`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ GeneratingCommand
 | process <command name> [argument, ...]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

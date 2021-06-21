@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `decode`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | decode {src field} [as {dest field}] with <codec> | {src field} with <codec> [as {dest field}] | [[codec=]<codec>] [[src=]{src field}] [[dest=]{dest field}]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

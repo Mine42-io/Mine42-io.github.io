@@ -18,6 +18,9 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `zmq_pull`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ GeneratingCommand
 | zmq_pull [[url=]<url>] [[code=]<codec>] [[field=]{field}|({field}, ...)]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

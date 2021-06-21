@@ -18,7 +18,6 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `mpl_commands`
@@ -26,17 +25,13 @@ GeneratingCommand
 * `commands`
 * `command`
 
-
 ## Synopsis
 
 ```shell
 | mpl_commands [[command=]command_name] [[ebnf=]yes|no]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `tailf`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | tailf [[count=]<count>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

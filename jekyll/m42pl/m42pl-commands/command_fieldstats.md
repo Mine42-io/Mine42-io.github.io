@@ -18,16 +18,19 @@ BufferingCommand
 ---
 
 
-
 ## Aliases
 
 * `fieldstats`
 * `fieldsstats`
 * `fstats`
 
+## Synopsis
+
+```shell
+| fieldstats 
+```
+
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,12 +18,10 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `kvread`
 * `kv_read`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ GeneratingCommand
 | kvread <key name> | <key name> as <field> | <field> = <key name>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

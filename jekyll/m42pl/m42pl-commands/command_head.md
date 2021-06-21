@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `head`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | head [[count=]<count>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

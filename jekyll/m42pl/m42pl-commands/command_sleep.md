@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `sleep`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | sleep <seconds>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

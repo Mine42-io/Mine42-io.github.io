@@ -18,6 +18,9 @@ MetaCommand
 ---
 
 
+## Aliases
+
+* `_recordmacro`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ MetaCommand
 | _recordmacro <name> [ ... ]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

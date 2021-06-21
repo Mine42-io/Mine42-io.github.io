@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `wrap`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | wrap [field=]{field name}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

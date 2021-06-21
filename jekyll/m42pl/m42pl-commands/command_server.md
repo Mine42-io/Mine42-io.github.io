@@ -1,13 +1,13 @@
 ---
 layout: default
-title: http-server
+title: server
 parent: Core commands
 grand_parent: M42PL
 ---
 
-# `http-server`
+# `server`
 
-Runs an HTTP server
+Runs a socket server
 
 Beta
 {: .label .label-yellow }
@@ -18,23 +18,17 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
-* `http-server`
-* `http_server`
-
+* `server`
 
 ## Synopsis
 
 ```shell
-| http-server [[host=]{host}] [[port]={port}] (<pipeline> | with 'method' on 'path' = <pipeline>, ...)
+| server [[protocol=]<tcp|udp>] [[host=]{server address}] [[port=]{server port}] [...]
 ```
-
 
 ## Description
 
 ## Examples
-
-## See also
 

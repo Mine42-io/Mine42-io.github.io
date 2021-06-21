@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `expand`
 * `mvexpand`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | expand [field=]{field name}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `_macrorun`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | _macrorun <name>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

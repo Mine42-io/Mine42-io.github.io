@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `write`
 * `writefile`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | write ({field name} to) {file path}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

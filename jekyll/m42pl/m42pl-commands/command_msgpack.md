@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `msgpack`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | msgpack [<field>] [as <field>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

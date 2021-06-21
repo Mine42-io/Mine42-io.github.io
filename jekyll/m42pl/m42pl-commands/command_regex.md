@@ -18,13 +18,11 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `regex`
 * `rex`
 * `rx`
-
 
 ## Synopsis
 
@@ -32,10 +30,7 @@ StreamingCommand
 | regex [expression=]<regex> [src=]<source_field> [[dest=]<dest_field>] [[update=](yes|no)]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

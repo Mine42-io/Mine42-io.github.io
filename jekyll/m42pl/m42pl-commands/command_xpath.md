@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `xpath`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | xpath <[expression=]expression> <[field=]source field> [[dest=]dest field]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

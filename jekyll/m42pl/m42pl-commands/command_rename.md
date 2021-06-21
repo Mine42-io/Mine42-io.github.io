@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `rename`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | rename <existing_field> [as] <new_field> [, ...]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

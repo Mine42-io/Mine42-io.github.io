@@ -18,9 +18,17 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `macros`
+
+## Synopsis
+
+```shell
+| macros 
+```
+
 ## Description
 
 ## Examples
-
-## See also
 

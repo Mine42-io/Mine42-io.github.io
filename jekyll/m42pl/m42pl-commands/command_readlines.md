@@ -18,12 +18,10 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `readlines`
 * `readline`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ GeneratingCommand
 | readlines [path=]{file path} [field=]{dest field}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

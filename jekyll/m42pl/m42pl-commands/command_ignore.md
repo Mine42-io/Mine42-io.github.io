@@ -18,13 +18,11 @@ MetaCommand
 ---
 
 
-
 ## Aliases
 
 * `ignore`
 * `pass`
 * `comment`
-
 
 ## Synopsis
 
@@ -32,10 +30,7 @@ MetaCommand
 | ignore ...
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `jsonpath`
 * `jspath`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | jsonpath <[expression=]expression> <[field=]source field>[[dest=]dest field]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

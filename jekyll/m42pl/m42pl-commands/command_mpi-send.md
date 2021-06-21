@@ -18,7 +18,6 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `mpi-send`
@@ -27,10 +26,15 @@ StreamingCommand
 * `_pre_stats_merge`
 * `_post_stats_merge`
 * `_post_stats_buffer`
+* `bin`
+
+## Synopsis
+
+```shell
+| mpi-send 
+```
 
 ## Description
 
 ## Examples
-
-## See also
 

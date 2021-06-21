@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `assert`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | assert <expression>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

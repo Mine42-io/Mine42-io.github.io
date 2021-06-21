@@ -18,6 +18,9 @@ StreamingCommand
 ---
 
 
+## Aliases
+
+* `msgunpack`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ StreamingCommand
 | msgunpack [<field>] [as <field>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

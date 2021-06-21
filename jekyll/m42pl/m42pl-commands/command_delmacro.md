@@ -18,6 +18,9 @@ MetaCommand
 ---
 
 
+## Aliases
+
+* `delmacro`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ MetaCommand
 | delmacro {name}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

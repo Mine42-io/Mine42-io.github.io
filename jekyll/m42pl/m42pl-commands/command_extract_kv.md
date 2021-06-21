@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `extract_kv`
 * `extract_kvs`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | extract_kv [field=]<source field> [[kvdelim=]<key/value delimiter>] [[pairdelim=]<key/value pairs delimiter>] [[dest=]<dest field>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

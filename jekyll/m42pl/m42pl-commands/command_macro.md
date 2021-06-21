@@ -18,6 +18,9 @@ MetaCommand
 ---
 
 
+## Aliases
+
+* `macro`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ MetaCommand
 | macro [<name> [pipeline]]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

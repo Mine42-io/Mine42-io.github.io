@@ -18,6 +18,9 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `readfile`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ GeneratingCommand
 | readfile {file path} (as {field name})
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+Welcome to the Mine42 documentation website !

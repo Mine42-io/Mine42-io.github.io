@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `cut`
 * `split`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | cut [field=]{field} [expr=]<regex> [[clean=]<yes|no>]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

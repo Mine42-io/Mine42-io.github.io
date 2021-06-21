@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `split`
 * `mvsplit`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | split [field=]{field name}
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

@@ -18,6 +18,9 @@ GeneratingCommand
 ---
 
 
+## Aliases
+
+* `until`
 
 ## Synopsis
 
@@ -25,10 +28,7 @@ GeneratingCommand
 | until <field> <pipeline>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

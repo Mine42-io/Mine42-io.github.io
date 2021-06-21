@@ -18,12 +18,10 @@ GeneratingCommand
 ---
 
 
-
 ## Aliases
 
 * `zmq_sub`
 * `zmq_subscribe`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ GeneratingCommand
 | zmq_sub [[url=]<url>] [[code=]<codec>] [[field=]{field}|({field}, ...)]
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

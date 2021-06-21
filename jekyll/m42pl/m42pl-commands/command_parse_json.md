@@ -18,12 +18,10 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `parse_json`
 * `json_parse`
-
 
 ## Synopsis
 
@@ -31,10 +29,7 @@ StreamingCommand
 | parse_json [field=]<field>
 ```
 
-
 ## Description
 
 ## Examples
-
-## See also
 

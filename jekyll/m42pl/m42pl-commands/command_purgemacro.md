@@ -18,15 +18,18 @@ MetaCommand
 ---
 
 
-
 ## Aliases
 
 * `purgemacro`
 * `purgemacros`
 
+## Synopsis
+
+```shell
+| purgemacro 
+```
+
 ## Description
 
 ## Examples
-
-## See also
 

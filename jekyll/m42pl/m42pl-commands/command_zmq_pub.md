@@ -18,15 +18,18 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `zmq_pub`
 * `zmq_publish`
 
+## Synopsis
+
+```shell
+| zmq_pub 
+```
+
 ## Description
 
 ## Examples
-
-## See also
 

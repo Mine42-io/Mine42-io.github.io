@@ -18,19 +18,16 @@ StreamingCommand
 ---
 
 
-
 ## Aliases
 
 * `eval`
 * `evaluate`
-
 
 ## Synopsis
 
 ```shell
 | eval <field_name> = <expression> [, ...]
 ```
-
 
 
 ## Description
@@ -131,6 +128,4 @@ variables resolution mechanism.
     command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md')
 ```
 
-
-## See also
 
