@@ -7,13 +7,14 @@ has_children: true
 
 # M42PL - A Data Processing Language
 
-M42PL is a **data processing language**, inspired by Unix shells and [Splunk][].
+M42PL is a **data processing language**, inspired by Unix shells and
+[Splunk][splunk].
 
-The language is designed to be as easy as possible to use, and to make common 
-scripting and programming tasks even easier. It does not have a tedious syntax
-to learn, and hides advanced programming concepts from the user.
+The language is designed for streams manipulation and provides a wide amount of
+commands to collect and process data. It focuses on simplicity and hides
+advanced programming concepts from the user.
 
-Some examples:
+Some code examples:
 
 **Query an URL**
 
@@ -42,7 +43,7 @@ Some examples:
 
 **Capture and stream a video**
 
-Read from the webcam:
+> This requires the installation of the [lab commands][m42pl-git-commands-lab]
 
 ```
 | cv2_read
@@ -50,10 +51,23 @@ Read from the webcam:
 | zmq_pub topic='webcam'
 ```
 
-**Display a streamed video**
+**Display a video stream**
+
+> This requires the installation of the [lab commands][m42pl-git-commands-lab]
 
 ```
 | zmq_sub topic='webcam'
 | decode {zmq.frames[0]} with 'msgpack'
 | cv2_show cv2.frame
 ```
+
+---
+
+[splunk]: https://splunk.com
+[m42pl-git-core]: https://github.com/jpclipffel/m42pl-core
+[m42pl-git-commands]: https://github.com/jpclipffel/m42pl-commands
+[m42pl-git-commands-lab]: https://github.com/jpclipffel/m42pl-commands-lab
+[m42pl-git-dispatchers]: https://github.com/jpclipffel/m42pl-dispatchers
+[m42pl-git-kvstores]: https://github.com/jpclipffel/m42pl-kvstores
+[m42pl-git-encoders]: https://github.com/jpclipffel/m42pl-encoders
+[m42pl-docs-commands]: https://mine42.io/m42pl/m42pl-commands
