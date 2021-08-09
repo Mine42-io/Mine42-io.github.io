@@ -25,7 +25,7 @@ StreamingCommand
 ## Synopsis
 
 ```shell
-| _macrorun <name>
+| _macrorun [name=]<name> [{field}=<value>, ...]
 ```
 
 ## Description

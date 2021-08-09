@@ -1,19 +1,19 @@
 {"0": {
     "doc": "About",
     "title": "About",
-    "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/) You can find the source code for Minima at GitHub: [jekyll][jekyll-organization] / [minima](https://github.com/jekyll/minima) You can find the source code for Jekyll at GitHub: [jekyll][jekyll-organization] / [jekyll](https://github.com/jekyll/jekyll) [jekyll-organization]: https://github.com/jekyll ",
+    "content": "More to come here someday ! ",
     "url": "https://docs.mine42.io/about/",
     "relUrl": "/about/"
   },"1": {
     "doc": "_macrorun",
     "title": "_macrorun",
-    "content": "# `_macrorun` Run a macro (use 'macro' command instead ) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `_macrorun` ## Synopsis ```shell | _macrorun ``` ## Description ## Examples ",
+    "content": "# `_macrorun` Run a macro (use 'macro' command instead ) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `_macrorun` ## Synopsis ```shell | _macrorun [name=] [{field}=, ...] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command__macrorun.html",
     "relUrl": "/m42pl/m42pl-commands/command__macrorun.html"
   },"2": {
     "doc": "_recordmacro",
     "title": "_recordmacro",
-    "content": "# `_recordmacro` Record a global macro (use the 'macro' command instead) Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `_recordmacro` ## Synopsis ```shell | _recordmacro [ ... ] ``` ## Description ## Examples ",
+    "content": "# `_recordmacro` Record a global macro (use the 'macro' command instead) Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `_recordmacro` ## Synopsis ```shell | _recordmacro [ ... ] [notes] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command__recordmacro.html",
     "relUrl": "/m42pl/m42pl-commands/command__recordmacro.html"
   },"3": {
@@ -61,25 +61,25 @@
   },"10": {
     "doc": "eval",
     "title": "eval",
-    "content": "# `eval` Evaluate a Python expression and assign result to a field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `eval` * `evaluate` ## Synopsis ```shell | eval = [, ...] ``` ## Description `eval` evaluates an expression and returns its results. The expression is evaluated by the underlying Python interpreter. Unlike standard evaluation, `eval` uses a set of custom functions and a custom variables resolution mechanism. ### Evaluation functions #### Misc. | Function name | Aliases | Syntax | Description |-----------------|---------|------------------------------|-------------| `field` | `field( [,])` | Returns the value of `` or `default` (default: `None`) | `isnull` | `isnull()` | Returns `True` if `` is `None`, `False` otherwise | `isnotnull` | `isnotnull()` | Returns `True` if `` is not `None`, `True` otherwise | `coalesce` | `coalesce( [, ...])` | Returns the value of the first non-null `` | #### Time | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| now | | reltime | | strftime | | #### Cast | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| tostring | | toint | | tofloat | | #### String | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| clean | | #### List | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| list | | join | | slice | | index | | length | | #### Map | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| keys | | #### Math | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| round | | even | | true | | false | | #### Filter | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| match | | #### Path | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| basename | | dirname | | joinpath | | cwd | | ## Examples ``` | make showinfo=yes | eval some.field = id + 1 ``` ``` | commands | eval command.name = at(command.aliases, 0), command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md') ``` ",
+    "content": "# `eval` Evaluate a Python expression and assign result to a field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `eval` * `evaluate` ## Synopsis ```shell | eval = [, ...] ``` ## Description `eval` evaluates an expression and returns its results. The expression is evaluated by the underlying Python interpreter. Unlike standard evaluation, `eval` uses a set of custom functions and a custom variables resolution mechanism. ### Evaluation functions #### Misc. | Function name | Aliases | Syntax | Description |-----------------|---------|------------------------------|-------------| `field` | `field( [,])` | Returns the value of `` or `default` (default: `None`) | `isnull` | `isnull()` | Returns `True` if `` is `None`, `False` otherwise | `isnotnull` | `isnotnull()` | Returns `True` if `` is not `None`, `True` otherwise | `coalesce` | `coalesce( [, ...])` | Returns the value of the first non-null `` | #### Time | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| now | | reltime | | strftime | | #### Cast | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| tostring | | toint | | tofloat | | #### String | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| clean | | #### List | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| list | | join | | slice | | index | | length | | #### Map | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| keys | | #### Math | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| round | | even | | true | | false | | #### Filter | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| match | | #### Path | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| basename | | dirname | | joinpath | | cwd | | ## Examples ``` | make showinfo=yes | eval some.field = id + 1 ``` ``` | commands | eval command.name = at(command.aliases, 0), command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md') ``` --- layout: default title: eval parent: Core commands grand_parent: M42PL --- # `eval` Evaluate a Python expression and assign result to a field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `eval` * `evaluate` ## Synopsis ```shell | eval = [, ...] ``` ## Description `eval` evaluates an expression and returns its results. The expression is evaluated by the underlying Python interpreter. Unlike standard evaluation, `eval` uses a set of custom functions and a custom variables resolution mechanism. ### Evaluation functions #### Misc. | Function name | Aliases | Syntax | Description |-----------------|---------|------------------------------|-------------| `field` | `field( [,])` | Returns the value of `` or `default` (default: `None`) | `isnull` | `isnull()` | Returns `True` if `` is `None`, `False` otherwise | `isnotnull` | `isnotnull()` | Returns `True` if `` is not `None`, `True` otherwise | `coalesce` | `coalesce( [, ...])` | Returns the value of the first non-null `` | #### Time | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| now | | reltime | | strftime | | #### Cast | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| tostring | | toint | | tofloat | | #### String | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| clean | | #### List | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| list | | join | | slice | | index | | length | | #### Map | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| keys | | #### Math | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| round | | even | | true | | false | | #### Filter | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| match | | #### Path | Function name | Aliases | Syntax | Description |---------------|---------|--------|-------------| basename | | dirname | | joinpath | | cwd | | ## Examples ``` | make showinfo=yes | eval some.field = id + 1 ``` ``` | commands | eval command.name = at(command.aliases, 0), command.markdown = joinpath('markdown', at(command.aliases, 0) + '.md') ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_eval.html",
     "relUrl": "/m42pl/m42pl-commands/command_eval.html"
   },"11": {
     "doc": "expand",
     "title": "expand",
-    "content": "# `expand` Duplicate event for each value of the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `expand` * `mvexpand` ## Synopsis ```shell | expand [field=]{field name} ``` ## Description ## Examples ",
+    "content": "# `expand` Duplicate event for each value of the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `expand` * `mvexpand` ## Synopsis ```shell | expand [field=]{field name} ``` ## Description ## Examples --- layout: default title: expand parent: Core commands grand_parent: M42PL --- # `expand` Duplicate event for each value of the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `expand` * `mvexpand` ## Synopsis ```shell | expand [field=]{field name} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_expand.html",
     "relUrl": "/m42pl/m42pl-commands/command_expand.html"
   },"12": {
     "doc": "extract_kv",
     "title": "extract_kv",
-    "content": "# `extract_kv` Extract keys/values pairs from a given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_kv` * `extract_kvs` ## Synopsis ```shell | extract_kv [field=] [[kvdelim=]] [[pairdelim=]] [[dest=]] ``` ## Description ## Examples ",
+    "content": "# `extract_kv` Extract keys/values pairs from a given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_kv` * `extract_kvs` ## Synopsis ```shell | extract_kv [field=] [[kvdelim=]] [[pairdelim=]] [[dest=]] ``` ## Description ## Examples --- layout: default title: extract_kv parent: Core commands grand_parent: M42PL --- # `extract_kv` Extract keys/values pairs from a given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_kv` * `extract_kvs` ## Synopsis ```shell | extract_kv [field=] [[kvdelim=]] [[pairdelim=]] [[dest=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_extract_kv.html",
     "relUrl": "/m42pl/m42pl-commands/command_extract_kv.html"
   },"13": {
     "doc": "extract_map",
     "title": "extract_map",
-    "content": "# `extract_map` Extract values from a given field. Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_map` * `extract_maps` ## Synopsis ```shell | extract_map [field=] [[headers=](headers)] [[prefix=]] [[delim=]] [[dest=]] ``` ## Description ## Examples ",
+    "content": "# `extract_map` Extract values from a given field. Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_map` * `extract_maps` ## Synopsis ```shell | extract_map [field=] [[headers=](headers)] [[prefix=]] [[delim=]] [[dest=]] ``` ## Description ## Examples --- layout: default title: extract_map parent: Core commands grand_parent: M42PL --- # `extract_map` Extract values from a given field. Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `extract_map` * `extract_maps` ## Synopsis ```shell | extract_map [field=] [[headers=](headers)] [[prefix=]] [[delim=]] [[dest=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_extract_map.html",
     "relUrl": "/m42pl/m42pl-commands/command_extract_map.html"
   },"14": {
@@ -91,7 +91,7 @@
   },"15": {
     "doc": "fieldstats",
     "title": "fieldstats",
-    "content": "# `fieldstats` Compute fields statistics Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `fieldstats` * `fieldsstats` * `fstats` ## Synopsis ```shell | fieldstats ``` ## Description ## Examples ",
+    "content": "# `fieldstats` Compute fields statistics Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `fieldstats` * `fieldsstats` * `fstats` ## Synopsis ```shell | fieldstats ``` ## Description ## Examples --- layout: default title: fieldstats parent: Core commands grand_parent: M42PL --- # `fieldstats` Compute fields statistics Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `fieldstats` * `fieldsstats` * `fstats` ## Synopsis ```shell | fieldstats ``` ## Description ## Examples --- layout: default title: fieldstats parent: Core commands grand_parent: M42PL --- # `fieldstats` Compute fields statistics Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `fieldstats` * `fieldsstats` * `fstats` ## Synopsis ```shell | fieldstats ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_fieldstats.html",
     "relUrl": "/m42pl/m42pl-commands/command_fieldstats.html"
   },"16": {
@@ -101,288 +101,318 @@
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_foreach.html",
     "relUrl": "/m42pl/m42pl-commands/command_foreach.html"
   },"17": {
+    "doc": "grok",
+    "title": "grok",
+    "content": "# `grok` Parse a source field using a Grok expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `grok` ## Synopsis ```shell | grok [expression=] [src=] [[dest=]] ``` ## Description ## Examples ",
+    "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_grok.html",
+    "relUrl": "/m42pl/m42pl-commands/command_grok.html"
+  },"18": {
     "doc": "head",
     "title": "head",
     "content": "# `head` Keep only the firsts events Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `head` ## Synopsis ```shell | head [[count=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_head.html",
     "relUrl": "/m42pl/m42pl-commands/command_head.html"
-  },"18": {
+  },"19": {
     "doc": "http_server",
     "title": "http_server",
-    "content": "# `http_server` Runs an HTTP server Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `http_server` * `server_http` ## Synopsis ```shell | http_server [[host=]{host}] [[port]={port}] ( | with 'method' on 'path' = , ...) ``` ## Description `http_server` starts an HTTP server and process each requests in the given pipelines. The server always returns (answers) the latest event processed, which is by default the client request. ## Examples Echo server: ``` | http_server [ | output buffer=1 ] ``` Process GET and POST requests: ``` | http_server with 'GET' on '/objects/{name}' = [ | output buffer=1 | eval response = 'got some ' + at(split(path, '/'), -1) | fields response ], 'POST' on '/objects' = [ | fields jsdata | wrap 'stored' ] ``` Set host and port: ``` | http_server host='1.2.3.4' port=1234 [ | output buffer=1 ] ``` ",
+    "content": "# `http_server` Runs an HTTP server Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `http_server` * `server_http` ## Synopsis ```shell | http_server [[host=]{host}] [[port]={port}] ( | with 'method' on 'path' = , ...) ``` ## Description `http_server` starts an HTTP server and process each requests in the given pipelines. The server always returns (answers) the latest event processed, which is by default the client request. ## Examples Echo server: ``` | http_server [ | output buffer=1 ] ``` Process GET and POST requests: ``` | http_server with 'GET' on '/objects/{name}' = [ | output buffer=1 | eval response = 'got some ' + at(split(path, '/'), -1) | fields response ], 'POST' on '/objects' = [ | fields jsdata | wrap 'stored' ] ``` Set host and port: ``` | http_server host='1.2.3.4' port=1234 [ | output buffer=1 ] ``` --- layout: default title: http_server parent: Core commands grand_parent: M42PL --- # `http_server` Runs an HTTP server Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `http_server` * `server_http` ## Synopsis ```shell | http_server [[host=]{host}] [[port]={port}] ( | with 'method' on 'path' = , ...) ``` ## Description `http_server` starts an HTTP server and process each requests in the given pipelines. The server always returns (answers) the latest event processed, which is by default the client request. ## Examples Echo server: ``` | http_server [ | output buffer=1 ] ``` Process GET and POST requests: ``` | http_server with 'GET' on '/objects/{name}' = [ | output buffer=1 | eval response = 'got some ' + at(split(path, '/'), -1) | fields response ], 'POST' on '/objects' = [ | fields jsdata | wrap 'stored' ] ``` Set host and port: ``` | http_server host='1.2.3.4' port=1234 [ | output buffer=1 ] ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_http_server.html",
     "relUrl": "/m42pl/m42pl-commands/command_http_server.html"
-  },"19": {
+  },"20": {
     "doc": "ignore",
     "title": "ignore",
-    "content": "# `ignore` Does nothing Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `ignore` * `pass` * `comment` ## Synopsis ```shell | ignore ... ``` ## Description ## Examples ",
+    "content": "# `ignore` Does nothing Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `ignore` * `pass` * `comment` ## Synopsis ```shell | ignore ... ``` ## Description ## Examples --- layout: default title: ignore parent: Core commands grand_parent: M42PL --- # `ignore` Does nothing Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `ignore` * `pass` * `comment` ## Synopsis ```shell | ignore ... ``` ## Description ## Examples --- layout: default title: ignore parent: Core commands grand_parent: M42PL --- # `ignore` Does nothing Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `ignore` * `pass` * `comment` ## Synopsis ```shell | ignore ... ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_ignore.html",
     "relUrl": "/m42pl/m42pl-commands/command_ignore.html"
-  },"20": {
+  },"21": {
     "doc": "jinja",
     "title": "jinja",
-    "content": "# `jinja` Renders a Jinja template Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jinja` * `template_jinja` * `jinja_template` ## Synopsis ```shell | jinja [src=]{source field} [dest=]{destination field} [[searchpath=]] ``` ## Description ## Examples ",
+    "content": "# `jinja` Renders a Jinja template Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jinja` * `template_jinja` * `jinja_template` ## Synopsis ```shell | jinja [src=]{source field} [dest=]{destination field} [[searchpath=]] ``` ## Description ## Examples --- layout: default title: jinja parent: Core commands grand_parent: M42PL --- # `jinja` Renders a Jinja template Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jinja` * `template_jinja` * `jinja_template` ## Synopsis ```shell | jinja [src=]{source field} [dest=]{destination field} [[searchpath=]] ``` ## Description ## Examples --- layout: default title: jinja parent: Core commands grand_parent: M42PL --- # `jinja` Renders a Jinja template Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jinja` * `template_jinja` * `jinja_template` ## Synopsis ```shell | jinja [src=]{source field} [dest=]{destination field} [[searchpath=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_jinja.html",
     "relUrl": "/m42pl/m42pl-commands/command_jinja.html"
-  },"21": {
+  },"22": {
     "doc": "jsonpath",
     "title": "jsonpath",
-    "content": "# `jsonpath` Evaluate an JSONPath expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jsonpath` * `jspath` ## Synopsis ```shell | jsonpath [[dest=]dest field] ``` ## Description ## Examples ",
+    "content": "# `jsonpath` Evaluate an JSONPath expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jsonpath` * `jspath` ## Synopsis ```shell | jsonpath [[dest=]dest field] ``` ## Description ## Examples --- layout: default title: jsonpath parent: Core commands grand_parent: M42PL --- # `jsonpath` Evaluate an JSONPath expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `jsonpath` * `jspath` ## Synopsis ```shell | jsonpath [[dest=]dest field] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_jsonpath.html",
     "relUrl": "/m42pl/m42pl-commands/command_jsonpath.html"
-  },"22": {
+  },"23": {
     "doc": "kvread",
     "title": "kvread",
-    "content": "# `kvread` Read a KVStore key Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `kvread` * `kv_read` ## Synopsis ```shell | kvread | as | = ``` ## Description ## Examples ",
+    "content": "# `kvread` Read a KVStore key Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `kvread` * `kv_read` ## Synopsis ```shell | kvread | as | = ``` ## Description ## Examples --- layout: default title: kvread parent: Core commands grand_parent: M42PL --- # `kvread` Read a KVStore key Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `kvread` * `kv_read` ## Synopsis ```shell | kvread | as | = ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_kvread.html",
     "relUrl": "/m42pl/m42pl-commands/command_kvread.html"
-  },"23": {
+  },"24": {
     "doc": "kvwrite",
     "title": "kvwrite",
-    "content": "# `kvwrite` Set a KVStore key Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `kvwrite` * `kv_write` ## Synopsis ```shell | kvwrite [=] ``` ## Description ## Examples ",
+    "content": "# `kvwrite` Set a KVStore key Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `kvwrite` * `kv_write` ## Synopsis ```shell | kvwrite [=] ``` ## Description ## Examples --- layout: default title: kvwrite parent: Core commands grand_parent: M42PL --- # `kvwrite` Set a KVStore key Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `kvwrite` * `kv_write` ## Synopsis ```shell | kvwrite [=] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_kvwrite.html",
     "relUrl": "/m42pl/m42pl-commands/command_kvwrite.html"
-  },"24": {
+  },"25": {
     "doc": "macro",
     "title": "macro",
-    "content": "# `macro` Record a macro, run a macro or return macros list Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `macro` ## Synopsis ```shell | macro [ [pipeline]] ``` ## Description ## Examples ",
+    "content": "# `macro` Record a macro, run a macro or return macros list Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `macro` ## Synopsis ```shell | macro [ [pipeline]] ``` The `macro` command will cast itself into one of three other comands when ran, depending on its arguments: | Command | Effect | Condition |----------------|-----------------------|-------------------------------------------------------------| `macros` | List available macros | No argument | `_recordmacro` | Record a macro | A pipeline is given in parameters | `_runmacro` | Run a macro | A macro name and optional arguments are given in parameters | ### List the macros The commands `macro` (without argument) and `macros` behaves identically: ``` | macro ``` ``` | macros ``` ### Record a macro ``` | macro pipeline ``` #### Examples `make_10` will generate 10 events when invoked: ``` | macro make_10 [ | make count=10 showinfo=yes ] ``` `make_some` will generate the number of events if the field named `count`. If `count` is not found in the field, it will generate 1 event: ``` | macro make_some [ | make count=`field(count, 1)` showinfo=yes ] ``` ### Run a macro ``` | macro [=, ...] ``` Examples: ``` | macro make_10 ``` ``` | macro make_some count=5 ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_macro.html",
     "relUrl": "/m42pl/m42pl-commands/command_macro.html"
-  },"25": {
+  },"26": {
     "doc": "macros",
     "title": "macros",
     "content": "# `macros` Returns available macros Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `macros` ## Synopsis ```shell | macros ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_macros.html",
     "relUrl": "/m42pl/m42pl-commands/command_macros.html"
-  },"26": {
+  },"27": {
     "doc": "make",
     "title": "make",
-    "content": "# `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate 10 events with basic information: ``` | make count=10 showinfo=yes ``` ",
+    "content": "# `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate 10 events with basic information: ``` | make count=10 showinfo=yes ``` --- layout: default title: make parent: Core commands grand_parent: M42PL --- # `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate 10 events with basic information: ``` | make count=10 showinfo=yes ``` --- layout: default title: make parent: Core commands grand_parent: M42PL --- # `make` Generates and returns new events Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `make` * `makeevent` * `makeevents` ## Synopsis ```shell | make [[count=]] [[showinfo=](yes|no)][[chunks=]] [[frequency=]] ``` ## Description `make` generates events. It is primarily used in local scripts, REPL mode and debug operations. ## Examples Generate a single, empty event: ``` | make ``` Generate 10 events with basic information: ``` | make count=10 showinfo=yes ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_make.html",
     "relUrl": "/m42pl/m42pl-commands/command_make.html"
-  },"27": {
+  },"28": {
     "doc": "mpi-send",
     "title": "mpi-send",
-    "content": "# `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` * `_pre_stats_merge` * `_post_stats_merge` * `_post_stats_buffer` * `bin` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples ",
+    "content": "# `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` * `_pre_stats_merge` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` * `_pre_stats_merge` * `_post_stats_merge` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` * `_pre_stats_merge` * `_post_stats_merge` * `_post_stats_buffer` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples --- layout: default title: mpi-send parent: Core commands grand_parent: M42PL --- # `mpi-send` Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `mpi-send` * `mpi-receive` * `_stream_stats` * `_pre_stats_merge` * `_post_stats_merge` * `_post_stats_buffer` * `bin` ## Synopsis ```shell | mpi-send ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_mpi-send.html",
     "relUrl": "/m42pl/m42pl-commands/command_mpi-send.html"
-  },"28": {
+  },"29": {
     "doc": "mpl_commands",
     "title": "mpl_commands",
-    "content": "# `mpl_commands` Returns the list of available commands Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `mpl_commands` * `mpl_command` * `commands` * `command` ## Synopsis ```shell | mpl_commands [[command=]command_name] [[ebnf=]yes|no] ``` ## Description ## Examples ",
+    "content": "# `mpl_commands` Returns the list of available commands Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `mpl_commands` * `mpl_command` * `commands` * `command` ## Synopsis ```shell | mpl_commands [[command=]command_name] [[ebnf=]yes|no] ``` ## Description ## Examples --- layout: default title: mpl_commands parent: Core commands grand_parent: M42PL --- # `mpl_commands` Returns the list of available commands Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `mpl_commands` * `mpl_command` * `commands` * `command` ## Synopsis ```shell | mpl_commands [[command=]command_name] [[ebnf=]yes|no] ``` ## Description ## Examples --- layout: default title: mpl_commands parent: Core commands grand_parent: M42PL --- # `mpl_commands` Returns the list of available commands Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `mpl_commands` * `mpl_command` * `commands` * `command` ## Synopsis ```shell | mpl_commands [[command=]command_name] [[ebnf=]yes|no] ``` ## Description ## Examples --- layout: default title: mpl_commands parent: Core commands grand_parent: M42PL --- # `mpl_commands` Returns the list of available commands Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `mpl_commands` * `mpl_command` * `commands` * `command` ## Synopsis ```shell | mpl_commands [[command=]command_name] [[ebnf=]yes|no] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_mpl_commands.html",
     "relUrl": "/m42pl/m42pl-commands/command_mpl_commands.html"
-  },"29": {
+  },"30": {
     "doc": "msgpack",
     "title": "msgpack",
     "content": "# `msgpack` Pack an event or and event field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `msgpack` ## Synopsis ```shell | msgpack [] [as ] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_msgpack.html",
     "relUrl": "/m42pl/m42pl-commands/command_msgpack.html"
-  },"30": {
+  },"31": {
     "doc": "msgunpack",
     "title": "msgunpack",
     "content": "# `msgunpack` Unpack an event field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `msgunpack` ## Synopsis ```shell | msgunpack [] [as ] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_msgunpack.html",
     "relUrl": "/m42pl/m42pl-commands/command_msgunpack.html"
-  },"31": {
+  },"32": {
     "doc": "noout",
     "title": "noout",
-    "content": "# `noout` Mimics output syntax but does not prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `noout` * `nooutput` * `noprint` ## Synopsis ```shell | noout [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description ## Examples ",
+    "content": "# `noout` Mimics output syntax but does not prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `noout` * `nooutput` * `noprint` ## Synopsis ```shell | noout [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description ## Examples --- layout: default title: noout parent: Core commands grand_parent: M42PL --- # `noout` Mimics output syntax but does not prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `noout` * `nooutput` * `noprint` ## Synopsis ```shell | noout [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description ## Examples --- layout: default title: noout parent: Core commands grand_parent: M42PL --- # `noout` Mimics output syntax but does not prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `noout` * `nooutput` * `noprint` ## Synopsis ```shell | noout [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_noout.html",
     "relUrl": "/m42pl/m42pl-commands/command_noout.html"
-  },"32": {
+  },"33": {
     "doc": "output",
     "title": "output",
-    "content": "# `output` Prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `output` * `print` ## Synopsis ```shell | output [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description `output` prints events on the standard output (i.e. the terminal). `output` can print events using the specified `format`, which should match an **encoder** name (e.g. `json`, `hjson`, ...). It also buffers events and filters duplicate events id (only the latest event with a given ID is kept in the internal buffer and then printed). ## Examples Output events: ``` | output ``` Output events as they arrive (without buffer): ``` | output buffer=1 ``` Output events as 'json' strings: ``` | output format='json' ``` ",
+    "content": "# `output` Prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `output` * `print` ## Synopsis ```shell | output [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description `output` prints events on the standard output (i.e. the terminal). `output` can print events using the specified `format`, which should match an **encoder** name (e.g. `json`, `hjson`, ...). It also buffers events and filters duplicate events id (only the latest event with a given ID is kept in the internal buffer and then printed). ## Examples Output events: ``` | output ``` Output events as they arrive (without buffer): ``` | output buffer=1 ``` Output events as 'json' strings: ``` | output format='json' ``` --- layout: default title: output parent: Core commands grand_parent: M42PL --- # `output` Prints events Beta {: .label .label-yellow } BufferingCommand {: .label-blue } --- ## Aliases * `output` * `print` ## Synopsis ```shell | output [[format=](hjson|raw|...)] [[buffer=]] ``` ## Description `output` prints events on the standard output (i.e. the terminal). `output` can print events using the specified `format`, which should match an **encoder** name (e.g. `json`, `hjson`, ...). It also buffers events and filters duplicate events id (only the latest event with a given ID is kept in the internal buffer and then printed). ## Examples Output events: ``` | output ``` Output events as they arrive (without buffer): ``` | output buffer=1 ``` Output events as 'json' strings: ``` | output format='json' ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_output.html",
     "relUrl": "/m42pl/m42pl-commands/command_output.html"
-  },"33": {
+  },"34": {
     "doc": "parse_json",
     "title": "parse_json",
-    "content": "# `parse_json` Parse a JSON string Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `parse_json` * `json_parse` ## Synopsis ```shell | parse_json [field=] ``` ## Description ## Examples ",
+    "content": "# `parse_json` Parse a JSON string Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `parse_json` * `json_parse` ## Synopsis ```shell | parse_json [field=] ``` ## Description ## Examples --- layout: default title: parse_json parent: Core commands grand_parent: M42PL --- # `parse_json` Parse a JSON string Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `parse_json` * `json_parse` ## Synopsis ```shell | parse_json [field=] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_parse_json.html",
     "relUrl": "/m42pl/m42pl-commands/command_parse_json.html"
-  },"34": {
+  },"35": {
     "doc": "process",
     "title": "process",
     "content": "# `process` Runs a process and yields its output line by line Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `process` ## Synopsis ```shell | process [argument, ...] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_process.html",
     "relUrl": "/m42pl/m42pl-commands/command_process.html"
-  },"35": {
+  },"36": {
     "doc": "purgemacro",
     "title": "purgemacro",
-    "content": "# `purgemacro` Purges all macros Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `purgemacro` * `purgemacros` ## Synopsis ```shell | purgemacro ``` ## Description ## Examples ",
+    "content": "# `purgemacro` Purges all macros Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `purgemacro` * `purgemacros` ## Synopsis ```shell | purgemacro ``` ## Description ## Examples --- layout: default title: purgemacro parent: Core commands grand_parent: M42PL --- # `purgemacro` Purges all macros Beta {: .label .label-yellow } MetaCommand {: .label-blue } --- ## Aliases * `purgemacro` * `purgemacros` ## Synopsis ```shell | purgemacro ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_purgemacro.html",
     "relUrl": "/m42pl/m42pl-commands/command_purgemacro.html"
-  },"36": {
+  },"37": {
     "doc": "readfile",
     "title": "readfile",
     "content": "# `readfile` Read a text file Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `readfile` ## Synopsis ```shell | readfile {file path} (as {field name}) ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_readfile.html",
     "relUrl": "/m42pl/m42pl-commands/command_readfile.html"
-  },"37": {
+  },"38": {
     "doc": "readlines",
     "title": "readlines",
-    "content": "# `readlines` Read a file line by line Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `readlines` * `readline` ## Synopsis ```shell | readlines [path=]{file path} [field=]{dest field} ``` ## Description ## Examples ",
+    "content": "# `readlines` Read a file line by line Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `readlines` * `readline` ## Synopsis ```shell | readlines [path=]{file path} [field=]{dest field} ``` ## Description ## Examples --- layout: default title: readlines parent: Core commands grand_parent: M42PL --- # `readlines` Read a file line by line Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `readlines` * `readline` ## Synopsis ```shell | readlines [path=]{file path} [field=]{dest field} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_readlines.html",
     "relUrl": "/m42pl/m42pl-commands/command_readlines.html"
-  },"38": {
+  },"39": {
     "doc": "regex",
     "title": "regex",
-    "content": "# `regex` Parse a source field using a regular expression with named groups Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `regex` * `rex` * `rx` ## Synopsis ```shell | regex [expression=] [src=] [[dest=]] [[update=](yes|no)] ``` ## Description ## Examples ",
+    "content": "# `regex` Parse a source field using a regular expression with named groups Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `regex` * `rex` * `rx` ## Synopsis ```shell | regex [expression=] [src=] [[dest=]] [[update=](yes|no)] ``` ## Description ## Examples --- layout: default title: regex parent: Core commands grand_parent: M42PL --- # `regex` Parse a source field using a regular expression with named groups Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `regex` * `rex` * `rx` ## Synopsis ```shell | regex [expression=] [src=] [[dest=]] [[update=](yes|no)] ``` ## Description ## Examples --- layout: default title: regex parent: Core commands grand_parent: M42PL --- # `regex` Parse a source field using a regular expression with named groups Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `regex` * `rex` * `rx` ## Synopsis ```shell | regex [expression=] [src=] [[dest=]] [[update=](yes|no)] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_regex.html",
     "relUrl": "/m42pl/m42pl-commands/command_regex.html"
-  },"39": {
+  },"40": {
     "doc": "rename",
     "title": "rename",
     "content": "# `rename` Rename fields Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `rename` ## Synopsis ```shell | rename [as] [, ...] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_rename.html",
     "relUrl": "/m42pl/m42pl-commands/command_rename.html"
-  },"40": {
+  },"41": {
     "doc": "script",
     "title": "script",
-    "content": "# `script` Parses a M42PL script and returns a pipelines map Beta {: .label .label-yellow } Command {: .label-blue } --- ## Aliases * `script` * `script_json` ## Synopsis ```shell | script [script=] ``` ## Description ## Examples ",
+    "content": "# `script` Parses a M42PL script and returns a pipelines map Beta {: .label .label-yellow } Command {: .label-blue } --- ## Aliases * `script` ## Synopsis ```shell | script [script=] ``` ## Description ## Examples --- layout: default title: script parent: Core commands grand_parent: M42PL --- # `script` Parses a M42PL script and returns a pipelines map Beta {: .label .label-yellow } Command {: .label-blue } --- ## Aliases * `script` * `script_json` ## Synopsis ```shell | script [script=] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_script.html",
     "relUrl": "/m42pl/m42pl-commands/command_script.html"
-  },"41": {
+  },"42": {
     "doc": "server",
     "title": "server",
     "content": "# `server` Runs a socket server Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `server` ## Synopsis ```shell | server [[protocol=]] [[host=]{server address}] [[port=]{server port}] [...] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_server.html",
     "relUrl": "/m42pl/m42pl-commands/command_server.html"
-  },"42": {
+  },"43": {
     "doc": "sleep",
     "title": "sleep",
     "content": "# `sleep` Sleep for the given amount of seconds (defaults to 1 second) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `sleep` ## Synopsis ```shell | sleep ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_sleep.html",
     "relUrl": "/m42pl/m42pl-commands/command_sleep.html"
-  },"43": {
+  },"44": {
     "doc": "split",
     "title": "split",
-    "content": "# `split` Returns one new event per value for the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `split` * `mvsplit` ## Synopsis ```shell | split [field=]{field name} ``` ## Description ## Examples ",
+    "content": "# `split` Returns one new event per value for the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `split` * `mvsplit` ## Synopsis ```shell | split [field=]{field name} ``` ## Description ## Examples --- layout: default title: split parent: Core commands grand_parent: M42PL --- # `split` Returns one new event per value for the given field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `split` * `mvsplit` ## Synopsis ```shell | split [field=]{field name} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_split.html",
     "relUrl": "/m42pl/m42pl-commands/command_split.html"
-  },"44": {
+  },"45": {
     "doc": "stats",
     "title": "stats",
-    "content": "# `stats` Performs statistical operations on an events stream Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `stats` * `aggr` * `aggregate` ## Synopsis ```shell | stats [as ], ... by , ... [with ...] ``` If no aggregation clause (the `by` word) is given, `stats` aggregates all events together without distinction: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id ``` ```json { \"min_id\": 0, \"max_id\": 9 } ``` If an aggregation clause (the `by` word) is given, `stats` aggregates events based on the `by` field(s). In the next example, events are aggregated _by_ the value of the field `is_even`: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id by is_even ``` ```json { \"is_even\": true, \"min_id\": 0, \"max_id\": 8 } { \"is_even\": false, \"min_id\": 1, \"max_id\": 9 } ``` One can also customize some aspect of `stats`'s internals by adding a `with` clause at the end of the command. This is not a standard use case: Please refers to the technical documentation for more information. ## Description `stats` aggregates events by field(s) and compute _statistical values_ from the events stream. ### Stats functions | Function | Syntax | Description |----------|-------------------|---------------------------------------| `count` | `count` | Count the number of events | `min` | `min()` | Returns the minimum value of `field` | `max` | `max()` | Returns the maximum value of `field` | `values` | `values()` | Returns the list of values of `field` | `first` | `first()` | Returns the first value of `field` | `last` | `last()` | Returns the latest value of `field` | ## Examples ",
+    "content": "# `stats` Performs statistical operations on an events stream Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `stats` * `aggr` * `aggregate` ## Synopsis ```shell | stats [as ], ... by , ... [with ...] ``` If no aggregation clause (the `by` word) is given, `stats` aggregates all events together without distinction: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id ``` ```json { \"min_id\": 0, \"max_id\": 9 } ``` If an aggregation clause (the `by` word) is given, `stats` aggregates events based on the `by` field(s). In the next example, events are aggregated _by_ the value of the field `is_even`: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id by is_even ``` ```json { \"is_even\": true, \"min_id\": 0, \"max_id\": 8 } { \"is_even\": false, \"min_id\": 1, \"max_id\": 9 } ``` One can also customize some aspect of `stats`'s internals by adding a `with` clause at the end of the command. This is not a standard use case: Please refers to the technical documentation for more information. ## Description `stats` aggregates events by field(s) and compute _statistical values_ from the events stream. ### Stats functions | Function | Syntax | Description |----------|-------------------|---------------------------------------| `count` | `count` | Count the number of events | `min` | `min()` | Returns the minimum value of `field` | `max` | `max()` | Returns the maximum value of `field` | `values` | `values()` | Returns the list of values of `field` | `first` | `first()` | Returns the first value of `field` | `last` | `last()` | Returns the latest value of `field` | ## Examples --- layout: default title: stats parent: Core commands grand_parent: M42PL --- # `stats` Performs statistical operations on an events stream Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `stats` * `aggr` * `aggregate` ## Synopsis ```shell | stats [as ], ... by , ... [with ...] ``` If no aggregation clause (the `by` word) is given, `stats` aggregates all events together without distinction: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id ``` ```json { \"min_id\": 0, \"max_id\": 9 } ``` If an aggregation clause (the `by` word) is given, `stats` aggregates events based on the `by` field(s). In the next example, events are aggregated _by_ the value of the field `is_even`: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id by is_even ``` ```json { \"is_even\": true, \"min_id\": 0, \"max_id\": 8 } { \"is_even\": false, \"min_id\": 1, \"max_id\": 9 } ``` One can also customize some aspect of `stats`'s internals by adding a `with` clause at the end of the command. This is not a standard use case: Please refers to the technical documentation for more information. ## Description `stats` aggregates events by field(s) and compute _statistical values_ from the events stream. ### Stats functions | Function | Syntax | Description |----------|-------------------|---------------------------------------| `count` | `count` | Count the number of events | `min` | `min()` | Returns the minimum value of `field` | `max` | `max()` | Returns the maximum value of `field` | `values` | `values()` | Returns the list of values of `field` | `first` | `first()` | Returns the first value of `field` | `last` | `last()` | Returns the latest value of `field` | ## Examples --- layout: default title: stats parent: Core commands grand_parent: M42PL --- # `stats` Performs statistical operations on an events stream Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `stats` * `aggr` * `aggregate` ## Synopsis ```shell | stats [as ], ... by , ... [with ...] ``` If no aggregation clause (the `by` word) is given, `stats` aggregates all events together without distinction: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id ``` ```json { \"min_id\": 0, \"max_id\": 9 } ``` If an aggregation clause (the `by` word) is given, `stats` aggregates events based on the `by` field(s). In the next example, events are aggregated _by_ the value of the field `is_even`: ``` | make count=10 showinfo=yes | eval is_even = even(id) | stats min(id) as min_id, max(id) as max_id by is_even ``` ```json { \"is_even\": true, \"min_id\": 0, \"max_id\": 8 } { \"is_even\": false, \"min_id\": 1, \"max_id\": 9 } ``` One can also customize some aspect of `stats`'s internals by adding a `with` clause at the end of the command. This is not a standard use case: Please refers to the technical documentation for more information. ## Description `stats` aggregates events by field(s) and compute _statistical values_ from the events stream. ### Stats functions | Function | Syntax | Description |----------|-------------------|---------------------------------------| `count` | `count` | Count the number of events | `min` | `min()` | Returns the minimum value of `field` | `max` | `max()` | Returns the maximum value of `field` | `values` | `values()` | Returns the list of values of `field` | `first` | `first()` | Returns the first value of `field` | `last` | `last()` | Returns the latest value of `field` | ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_stats.html",
     "relUrl": "/m42pl/m42pl-commands/command_stats.html"
-  },"45": {
+  },"46": {
     "doc": "tag",
     "title": "tag",
-    "content": "# `tag` Tags events with key/value pairs Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `tag` * `tags` ## Synopsis ```shell | tag ={field} [...] ``` ## Description ## Examples ",
+    "content": "# `tag` Tags events with key/value pairs Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `tag` * `tags` ## Synopsis ```shell | tag ={field} [...] ``` ## Description ## Examples --- layout: default title: tag parent: Core commands grand_parent: M42PL --- # `tag` Tags events with key/value pairs Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `tag` * `tags` ## Synopsis ```shell | tag ={field} [...] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_tag.html",
     "relUrl": "/m42pl/m42pl-commands/command_tag.html"
-  },"46": {
+  },"47": {
     "doc": "tailf",
     "title": "tailf",
     "content": "# `tailf` Ignore the firsts events Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `tailf` ## Synopsis ```shell | tailf [[count=]] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_tailf.html",
     "relUrl": "/m42pl/m42pl-commands/command_tailf.html"
-  },"47": {
+  },"48": {
     "doc": "until",
     "title": "until",
-    "content": "# `until` Run a sub-pipeline until a field become true Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `until` ## Synopsis ```shell | until ``` ## Description ## Examples ",
+    "content": "# `until` Run a sub-pipeline until a field become true Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `until` ## Synopsis ```shell | until ``` ## Description `until` can be used to construct loops. The command run its given sub-pipeline until the value of its given field become true. ## Examples Runs a sub-pipeline ten (10) times: ``` | until `field(foo, 0) == 10` [ | eval foo = field(foo, 0) + 1 | output buffer=1 ] ``` Note that the field is encolsed in backquotes (`` `field(foo, 0) == 10` ``): This is because the example is using an evaluated field. The evaluation command `field` return the content of the field `foo` or `0` if the field is not found. Runs a sub-pipeline once and demonstrate the use of non-evaluated fields: ``` | eval foo = False | foreach [ | until foo [ | eval foo = True ] ] ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_until.html",
     "relUrl": "/m42pl/m42pl-commands/command_until.html"
-  },"48": {
+  },"49": {
     "doc": "url",
     "title": "url",
-    "content": "# `url` Performs asynchronous HTTP calls to a given URL Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `url` * `curl` * `wget` ## Synopsis ```shell | url [urls=](url, ...) [[method=]{HTTP method}] [[headers]={headers k/v}][[data=]{data k/v}] [[json=]{json k/v}] [[frequency=]{seconds}][[count=]{integer}] ``` ## Description ## Examples ",
+    "content": "# `url` Performs asynchronous HTTP calls to a given URL Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `url` * `curl` * `wget` ## Synopsis ```shell | url [urls=](url, ...) [[method=]{HTTP method}] [[headers]={headers k/v}][[data=]{data k/v}] [[json=]{json k/v}] [[frequency=]{seconds}][[count=]{integer}] ``` ## Description ## Examples --- layout: default title: url parent: Core commands grand_parent: M42PL --- # `url` Performs asynchronous HTTP calls to a given URL Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `url` * `curl` * `wget` ## Synopsis ```shell | url [urls=](url, ...) [[method=]{HTTP method}] [[headers]={headers k/v}][[data=]{data k/v}] [[json=]{json k/v}] [[frequency=]{seconds}][[count=]{integer}] ``` ## Description ## Examples --- layout: default title: url parent: Core commands grand_parent: M42PL --- # `url` Performs asynchronous HTTP calls to a given URL Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `url` * `curl` * `wget` ## Synopsis ```shell | url [urls=](url, ...) [[method=]{HTTP method}] [[headers]={headers k/v}][[data=]{data k/v}] [[json=]{json k/v}] [[frequency=]{seconds}][[count=]{integer}] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_url.html",
     "relUrl": "/m42pl/m42pl-commands/command_url.html"
-  },"49": {
+  },"50": {
     "doc": "where",
     "title": "where",
-    "content": "# `where` Filter events using an eval expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `where` * `filter` ## Synopsis ```shell | where ``` ## Description ## Examples ",
+    "content": "# `where` Filter events using an eval expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `where` * `filter` ## Synopsis ```shell | where ``` ## Description ## Examples --- layout: default title: where parent: Core commands grand_parent: M42PL --- # `where` Filter events using an eval expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `where` * `filter` ## Synopsis ```shell | where ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_where.html",
     "relUrl": "/m42pl/m42pl-commands/command_where.html"
-  },"50": {
+  },"51": {
     "doc": "wrap",
     "title": "wrap",
     "content": "# `wrap` Wraps all fields into another field Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `wrap` ## Synopsis ```shell | wrap [field=]{field name} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_wrap.html",
     "relUrl": "/m42pl/m42pl-commands/command_wrap.html"
-  },"51": {
+  },"52": {
     "doc": "write-append",
     "title": "write-append",
-    "content": "# `write-append` Write events or events field to a file (append) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write-append` * `writefile-append` ## Synopsis ```shell | write-append ({field name} to) {file path} ``` ## Description ## Examples ",
+    "content": "# `write-append` Write events or events field to a file (append) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write-append` * `writefile-append` ## Synopsis ```shell | write-append ({field name} to) {file path} ``` ## Description ## Examples --- layout: default title: write-append parent: Core commands grand_parent: M42PL --- # `write-append` Write events or events field to a file (append) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write-append` * `writefile-append` ## Synopsis ```shell | write-append ({field name} to) {file path} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_write-append.html",
     "relUrl": "/m42pl/m42pl-commands/command_write-append.html"
-  },"52": {
+  },"53": {
     "doc": "write",
     "title": "write",
-    "content": "# `write` Write events or events field to a file (truncate) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write` * `writefile` ## Synopsis ```shell | write ({field name} to) {file path} ``` ## Description ## Examples ",
+    "content": "# `write` Write events or events field to a file (truncate) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write` * `writefile` ## Synopsis ```shell | write ({field name} to) {file path} ``` ## Description ## Examples --- layout: default title: write parent: Core commands grand_parent: M42PL --- # `write` Write events or events field to a file (truncate) Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `write` * `writefile` ## Synopsis ```shell | write ({field name} to) {file path} ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_write.html",
     "relUrl": "/m42pl/m42pl-commands/command_write.html"
-  },"53": {
+  },"54": {
     "doc": "xpath",
     "title": "xpath",
     "content": "# `xpath` Evaluate an XPath expression Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `xpath` ## Synopsis ```shell | xpath [[dest=]dest field] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_xpath.html",
     "relUrl": "/m42pl/m42pl-commands/command_xpath.html"
-  },"54": {
+  },"55": {
     "doc": "zmq_pub",
     "title": "zmq_pub",
-    "content": "# `zmq_pub` Publish events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_pub` * `zmq_publish` ## Synopsis ```shell | zmq_pub ``` ## Description ## Examples ",
+    "content": "# `zmq_pub` Publish events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_pub` * `zmq_publish` ## Synopsis ```shell | zmq_pub ``` ## Description ## Examples --- layout: default title: zmq_pub parent: Core commands grand_parent: M42PL --- # `zmq_pub` Publish events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_pub` * `zmq_publish` ## Synopsis ```shell | zmq_pub ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_zmq_pub.html",
     "relUrl": "/m42pl/m42pl-commands/command_zmq_pub.html"
-  },"55": {
+  },"56": {
     "doc": "zmq_pull",
     "title": "zmq_pull",
     "content": "# `zmq_pull` Pull events from a ZMQ socket Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `zmq_pull` ## Synopsis ```shell | zmq_pull [[url=]] [[code=]] [[field=]{field}|({field}, ...)] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_zmq_pull.html",
     "relUrl": "/m42pl/m42pl-commands/command_zmq_pull.html"
-  },"56": {
+  },"57": {
     "doc": "zmq_push",
     "title": "zmq_push",
-    "content": "# `zmq_push` Push events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_push` * `zmq_ventilate` ## Synopsis ```shell | zmq_push ``` ## Description ## Examples ",
+    "content": "# `zmq_push` Push events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_push` * `zmq_ventilate` ## Synopsis ```shell | zmq_push ``` ## Description ## Examples --- layout: default title: zmq_push parent: Core commands grand_parent: M42PL --- # `zmq_push` Push events or events field(s) to a ZMQ socket Beta {: .label .label-yellow } StreamingCommand {: .label-blue } --- ## Aliases * `zmq_push` * `zmq_ventilate` ## Synopsis ```shell | zmq_push ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_zmq_push.html",
     "relUrl": "/m42pl/m42pl-commands/command_zmq_push.html"
-  },"57": {
+  },"58": {
     "doc": "zmq_sub",
     "title": "zmq_sub",
-    "content": "# `zmq_sub` Subscribe and receive messages from a ZMQ socket Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `zmq_sub` * `zmq_subscribe` ## Synopsis ```shell | zmq_sub [[url=]] [[code=]] [[field=]{field}|({field}, ...)] ``` ## Description ## Examples ",
+    "content": "# `zmq_sub` Subscribe and receive messages from a ZMQ socket Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `zmq_sub` * `zmq_subscribe` ## Synopsis ```shell | zmq_sub [[url=]] [[code=]] [[field=]{field}|({field}, ...)] ``` ## Description ## Examples --- layout: default title: zmq_sub parent: Core commands grand_parent: M42PL --- # `zmq_sub` Subscribe and receive messages from a ZMQ socket Beta {: .label .label-yellow } GeneratingCommand {: .label-blue } --- ## Aliases * `zmq_sub` * `zmq_subscribe` ## Synopsis ```shell | zmq_sub [[url=]] [[code=]] [[field=]{field}|({field}, ...)] ``` ## Description ## Examples ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/command_zmq_sub.html",
     "relUrl": "/m42pl/m42pl-commands/command_zmq_sub.html"
-  },"58": {
+  },"59": {
+    "doc": "Concepts",
+    "title": "Concepts",
+    "content": "# Concepts M42PL - MPL for short - sees the world as a streams of data. Everything is a _data_ from which some _information_ can be extracted using the proper _algorithms_. _Data_ is at the root of everything else: webcam streams, text files, sensors feeds, etc. Data shape and content is heterogenous by nature. _Information_ is the generic term used to describe the outcome of data processing. Information is by nature temporary: as soon as an unit of information is (re)used, it become data again. _Algorithms_ refers to the M42PL pipelines, which consumes data and produces information. ## Pipelines Any M42PL script is a pipeline. A pipeline may reuse existing pipelines templates named _macros_ and my be split into sub-pipelines. Each pipeline produces _information_ from _data_. This information may be stored into a storage backend, sent to a queue, etc. ## Commands Commands manipulates events: they can change, remove and add events fields or filter and create events. ## Events Events store the data as chunks. They are similar to JSON objects. Events can have nested structure and support any kind of object. ",
+    "url": "https://docs.mine42.io/m42pl/concepts.html",
+    "relUrl": "/m42pl/concepts.html"
+  },"60": {
     "doc": "Local",
     "title": "Local",
     "content": "# `local` Runs pipelines on a single CPU. --- ## Aliases * `local` ## Synopsis This dispatcher takes no argument. ``` m42pl run -d local ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-dispatchers/dispatcher_local.html",
     "relUrl": "/m42pl/m42pl-dispatchers/dispatcher_local.html"
-  },"59": {
+  },"61": {
     "doc": "Local REPL",
     "title": "Local REPL",
     "content": "# `local_repl` Same as the `local` dispatcher (single CPU), but automatically adds an `output` command to the script. This dispatcher is used by default when running `m42pl repl`. One can disable the output either by: * Selecting another dispatcher such as `local`: `m42pl repl -d local` * Adding a `noout` command at the end of the script: `| ... | noout` One can also override the default `output` command by adding a custom command. Example: ``` | ... | output buffer=1 format='raw' ``` --- ## Aliases * `local_repl` ## Synopsis This dispatcher takes no argument. ``` m42pl run -d local_repl ``` ",
     "url": "https://docs.mine42.io/m42pl/m42pl-dispatchers/dispatcher_local_repl.html",
     "relUrl": "/m42pl/m42pl-dispatchers/dispatcher_local_repl.html"
-  },"60": {
+  },"62": {
     "doc": "Core dispatchers",
     "title": "Core dispatchers",
     "content": "_Dispatchers_ handles the M42PL's scripts execution. They can rearange a script to split it on multiple cores, schedule tasks on Celery nodes, etc. ",
     "url": "https://docs.mine42.io/m42pl/m42pl-dispatchers/",
     "relUrl": "/m42pl/m42pl-dispatchers/"
-  },"61": {
+  },"63": {
     "doc": "Core commands",
     "title": "Core commands",
     "content": "_Commands_ implements most of M42PL functionnalities. ",
     "url": "https://docs.mine42.io/m42pl/m42pl-commands/",
     "relUrl": "/m42pl/m42pl-commands/"
-  },"62": {
+  },"64": {
     "doc": "M42PL",
     "title": "M42PL",
     "content": "# M42PL - A Data Processing Language M42PL is a **data processing language**, inspired by Unix shells and [Splunk][splunk]. The language is designed for streams manipulation and provides a wide amount of commands to collect and process data. It focuses on simplicity and hides advanced programming concepts from the user. Some code examples: **Query an URL** ``` | url 'https://api.ipify.org' | fields response.content, response.status | eval message = 'Your external IP is ' + response.content | output format=json ``` **Run a HTTP server** ``` | http_server with '*' on '/foo' = [ | echo | eval path='foo', mode='infinite+iterator' | fields path, mode ], '*' on '/bar' = [ | eval path='bar', mode='infinite+stream' | fields path, mode ], '*' on '/{path}' = [] ``` **Capture and stream a video** > This requires the installation of the [lab commands][m42pl-git-commands-lab] ``` | cv2_read | cv2_resize ratio=0.5 | zmq_pub topic='webcam' ``` **Display a video stream** > This requires the installation of the [lab commands][m42pl-git-commands-lab] ``` | zmq_sub topic='webcam' | decode {zmq.frames[0]} with 'msgpack' | cv2_show cv2.frame ``` --- [splunk]: https://splunk.com [m42pl-git-core]: https://github.com/jpclipffel/m42pl-core [m42pl-git-commands]: https://github.com/jpclipffel/m42pl-commands [m42pl-git-commands-lab]: https://github.com/jpclipffel/m42pl-commands-lab [m42pl-git-dispatchers]: https://github.com/jpclipffel/m42pl-dispatchers [m42pl-git-kvstores]: https://github.com/jpclipffel/m42pl-kvstores [m42pl-git-encoders]: https://github.com/jpclipffel/m42pl-encoders [m42pl-docs-commands]: https://mine42.io/m42pl/m42pl-commands ",
     "url": "https://docs.mine42.io/m42pl/",
     "relUrl": "/m42pl/"
-  },"63": {
+  },"65": {
+    "doc": "Examples",
+    "title": "Examples",
+    "content": "M42PL examples and hints. ",
+    "url": "https://docs.mine42.io/m42pl/examples/",
+    "relUrl": "/m42pl/examples/"
+  },"66": {
     "doc": "Installation",
     "title": "Installation",
     "content": "# M42PL installation ## From the sources ### Requirements * Python 3.9+ * PIP ### Steps Create and activate a virtual environement: ```shell python3 -m virtualenv m42pl source m42pl/bin/activate ``` Install the core language `m42pl_core`: ``` git clone https://github.com/jpclipffel/m42pl-core pip install m42pl-core ``` Install the core commands `m42pl_commands`: ``` git clone https://github.com/jpclipffel/m42pl-commands pip install m42pl-commands ``` Install the core dispatchers `m42pl_dispatchers`: ``` git clone https://github.com/jpclipffel/m42pl-dispatchers pip install m42pl-dispatchers ``` Install the core kvstores `m42pl_kvsotres`: ``` git clone https://github.com/jpclipffel/m42pl-kvstores pip install m42pl-kvstores ``` Install the core encoders `m42pl_encoders`: ``` git clone https://github.com/jpclipffel/m42pl-encoders pip install m42pl-encoders ``` --- [m42pl-core-install]: https://github.com/jpclipffel/m42pl-core#installation ",
     "url": "https://docs.mine42.io/m42pl/installation.html",
     "relUrl": "/m42pl/installation.html"
-  },"64": {
+  },"67": {
+    "doc": "Mapping",
+    "title": "Mapping",
+    "content": "# Mapping M42PL's core commands provides several commands to manipulate data structure. ## XPath ## JsonPath ## See also * [Parsing]() ",
+    "url": "https://docs.mine42.io/m42pl/examples/mapping.html",
+    "relUrl": "/m42pl/examples/mapping.html"
+  },"68": {
+    "doc": "Parsing",
+    "title": "Parsing",
+    "content": "# Parsing M42PL's core commands provides several commands to parse data. ## Regular expression The `regex` command applies a regular expression to the given field. The regular expression should contains _named groups_: each named group is derived into a new field with the extracted data. ``` | eval msg = 'user=\"foo\",user_id=12345,command=\"ls -al\"' | regex msg with 'user=\\\"(?[^\\\"]*)\\\",user_id=(?[0-9]*),command=\\\"(?[^\\\"]?*\\\"' ``` ```json { \"msg\": \"user=\\\"foo\\\",user_id=12345,command=\\\"ls -al\\\"\", \"user\": \"foo\", \"user_id\": \"12345\", \"command\": \"ls -al\" } ``` You may also specify in which parent field you want to extract the named groups: ``` | eval msg = 'user=\"foo\",user_id=12345,command=\"ls -al\"' | regex msg with 'user=\\\"(?[^\\\"]*)\\\",user_id=(?[0-9]*),command=\\\"(?[^\\\"]?*\\\"' as log ``` ```json { \"msg\": \"user=\\\"foo\\\",user_id=12345,command=\\\"ls -al\\\"\", \"log\": { \"user\": \"foo\", \"user_id\": \"12345\", \"command\": \"ls -al\" } } ``` ## Grok The `grok` command applies a Grok pattern to the given field. Grok works in a similar way than standard regular expression, but allows you to use existing patterns to extract fields instead of writting regular expressions. The `grok` command also support nested fields extraction and types casting. ``` | eval msg = 'user=\"foo\",user_id=12345,command=\"ls -al\"' | grok msg with 'user=\"%{USER:user}\",user_id=%{INT:user_id:int},command=%{QUOTEDSTRING:command}' | eval command = strip(command, '\"') ``` ```json { \"msg\": \"user=\\\"foo\\\",user_id=12345,command=\\\"ls -al\\\"\", \"user\": \"foo\", \"user_id\": 12345, \"command\": \"ls -al\" } ``` You may also specify in which parent field you want to extract the named groups: ``` | eval msg = 'user=\"foo\",user_id=12345,command=\"ls -al\"' | grok msg with 'user=\"%{USER:user}\",user_id=%{INT:user_id:int},command=%{QUOTEDSTRING:command}' as log | eval log.command = strip(log.command, '\"') ``` ```json { \"msg\": \"user=\\\"foo\\\",user_id=12345,command=\\\"ls -al\\\"\", \"log\": { \"user\": \"foo\", \"user_id\": 12345, \"command\": \"ls -al\" } } ``` ## See also * [Mapping]() ",
+    "url": "https://docs.mine42.io/m42pl/examples/parsing.html",
+    "relUrl": "/m42pl/examples/parsing.html"
+  },"69": {
     "doc": "Usage",
     "title": "Usage",
     "content": "# Usage ## Basis M42PL can run scripts or can be run in REPL mode. M42PL scripts are standard text files, which end with `.mpl` or `.m42pl` by convention. To start an interpreter (REPL), run the command `m42pl repl` (type `exit` to leave): ``` $ m42pl repl m42pl | ``` Mandatory *hello world* script: ``` | make | eval hello = 'world !' ``` You may run a M42PL script using the `m42pl run` command: ```shell $ m42pl run ``` ## Syntax A M42PL script is a **pipeline** (a list of **commands** starting with pipes `|`): ``` | make | eval foo = 'bar' | output ``` You can separate commands with new lines too (new lines are ignored): ``` | make | eval foo = 'bar' | output ``` Most commands takes **parameters** (aka. **fields**): ``` | make 2 showinfo=yes | output ``` * **positional parameters** have no name (ex: `2`) * **named parameters** are prefixed with their name (ex: `showinfo=yes`) Commands **parameters** (aka. **fields**) support various syntax: | Example | Field | Description |--------------------------------------|-----------------------|---------------------| ``` | make count=2 ``` | `2` | Nunber | ``` | output format='json' ``` | `'json'` | String | ``` | make showinfo=`True` ``` | `` `True` `` | Eval expression | ``` | fields response.items ``` | `response.items` | Field path variable | ``` | fields {response.items[0]} ``` | `{response.items[0]}` | JSON path variable | ``` | wget url=[| read url.txt] ``` | `[| read url.txt]` | Sub-pipeline | A comment is a call to the `| ignore` or `| comment` command: ``` | make | ignore eval foo='bar' | output format=json ``` Commands have **multiple names** (aka. **aliases**); The following snippets are identical: ``` | make | eval foo='bar' | output ``` ``` | makeevent | evaluate foo='bar' | print ``` Five types of commands exists: * **Generating**: One per pipeline; Generate events (e.g. performs an HTTP request, read a file, consume a queue, etc.) * **Streaming**: Process events as they arrive. As many as needed per pipeline. * **Buffering**: Process events batches. As many as needed per pipeline. * **Meta**: Control the pipeline behaviour and parameters. As many as needed per pipeline. * **Merging**: Indicates that a split pipeline must be merged. Having a single generating command per pipeline may looks limitating, but M42PL supports **sub-pipelines**: ``` | readfile 'list_of_urls.txt' | foreach [ | wget url | fields response.content ] ``` Commands may also implements their own, custom grammar: ``` | make count=10 showinfo=yes | rename id as event.id | eval is_even = even(event.id) | stats count by is_even ``` ## Events M42PL's commands generates or manipulates _events_. Events are JSON-like data structure which contains keys associated with values (under the hood, events are just Python's `dict` instances). Example with the `make` command: ``` | make showinfo=yes | output ``` Output: ```json { \"id\": 0, \"chunk\": { \"chunk\": 0, \"chunks\": 1 }, \"count\": { \"begin\": 0, \"end\": 1 }, \"pipeline\": { \"name\": \"main\" } } ``` Events' keys can contains different kind of values: * Scalars: _string_, _float_ and _integer_ * Compund: _map_ and _list_ * Complex: other data structure The commands provided in M42PL [core commands][m42pl-git-commands] manipulates or generates events keys and values. During the execution of the pipeline, events may be stored into a remote database, printed onto the stadard output, saved to a file, etc. M42PL uses **encoders** to _encode_ (convert) events or fractions of events to another representation. The `encode` command creates a new field in the event which contains its encoded version: ``` | make showinfo=yes | encode with 'json' as encoded | output ``` Output: ```json { \"id\": 0, \"chunk\": { \"chunk\": 0, \"chunks\": 1 }, \"count\": { \"begin\": 0, \"end\": 1 }, \"pipeline\": { \"name\": \"main\" }, \"encoded\": \"{\\\"id\\\": 0, \\\"chunk\\\": {\\\"chunk\\\": 0, \\\"chunks\\\": 1}, \\\"count\\\": {\\\"begin\\\": 0, \\\"end\\\": 1}, \\\"pipeline\\\": {\\\"name\\\": \\\"main\\\"}}\" } ``` **Decoding** is the counterpart of **encoding**: the `decode` command converts a field into a native representation: ``` | make | eval encoded=\"{\\\"id\\\": 0, \\\"chunk\\\": {\\\"chunk\\\": 0, \\\"chunks\\\": 1}, \\\"count\\\": {\\\"begin\\\": 0, \\\"end\\\": 1}, \\\"pipeline\\\": {\\\"name\\\": \\\"main\\\"}}\" | decode encoded with 'json' ``` Output: ```json { \"encoded\": \"{\\\"id\\\": 0, \\\"chunk\\\": {\\\"chunk\\\": 0, \\\"chunks\\\": 1}, \\\"count\\\": {\\\"begin\\\": 0, \\\"end\\\": 1}, \\\"pipeline\\\": {\\\"name\\\": \\\"main\\\"}}\", \"id\": 0, \"chunk\": { \"chunk\": 0, \"chunks\": 1 }, \"count\": { \"begin\": 0, \"end\": 1 }, \"pipeline\": { \"name\": \"main\" } } ``` --- [m42pl-git-commands]: https://github.com/jpclipffel/m42pl-commands ",

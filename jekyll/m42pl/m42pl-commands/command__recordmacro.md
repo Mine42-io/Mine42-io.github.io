@@ -25,7 +25,7 @@ MetaCommand
 ## Synopsis
 
 ```shell
-| _recordmacro <name> [ ... ]
+| _recordmacro <name> [ ... ] [notes]
 ```
 
 ## Description
